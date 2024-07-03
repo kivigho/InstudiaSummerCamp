@@ -1,0 +1,347 @@
+level-1
+Syntax and Indentation
+•	Python uses indentation to define blocks of code. Consistent indentation is crucial.
+python
+Copy code
+if 5 > 2:
+    print("Five is greater than two!")
+•	if 5 > 2:: This checks if 5 is greater than 2. If true, the indented block below it is executed.
+•	print("Five is greater than two!"): This is the code block that gets executed if the condition is true.
+Variables
+•	Variables in Python can hold different data types and are created by assignment.
+python
+Copy code
+x = 5
+y = "Hello, World!"
+print(x)
+print(y)
+•	x = 5: Assigns the integer value 5 to the variable x.
+•	y = "Hello, World!": Assigns the string "Hello, World!" to the variable y.
+•	print(x): Outputs the value of x, which is 5.
+•	print(y): Outputs the value of y, which is "Hello, World!".
+Arithmetic Operators
+•	Perform basic arithmetic operations.
+
+python
+
+Copy code
+a = 10
+b = 3
+print(a + b)  # Addition: 13
+print(a - b)  # Subtraction: 7
+print(a * b)  # Multiplication: 30
+print(a / b)  # Division: 3.3333...
+print(a % b)  # Modulus: 1 (remainder of division)
+print(a ** b) # Exponentiation: 1000 (10 raised to the power of 3)
+•	a + b: Adds a and b.
+•	a - b: Subtracts b from a.
+•	a * b: Multiplies a and b.
+•	a / b: Divides a by b.
+•	a % b: Finds the remainder when a is divided by b.
+•	a ** b: Raises a to the power of b.
+Comparison Operators
+•	Used to compare two values.
+
+python
+
+Copy code
+print(a == b)  # Equal to: False
+print(a != b)  # Not equal to: True
+print(a > b)   # Greater than: True
+print(a < b)   # Less than: False
+print(a >= b)  # Greater than or equal to: True
+print(a <= b)  # Less than or equal to: False
+•	a == b: Checks if a is equal to b.
+•	a != b: Checks if a is not equal to b.
+•	a > b: Checks if a is greater than b.
+•	a < b: Checks if a is less than b.
+•	a >= b: Checks if a is greater than or equal to b.
+•	a <= b: Checks if a is less than or equal to b.
+Logical Operators
+•	Combine multiple conditions.
+
+python
+
+Copy code
+print(a > b and b < 5)    # True AND True: True
+print(a > b or b > 5)     # True OR False: True
+print(not(a > b))         # NOT True: False
+•	a > b and b < 5: Returns True if both conditions are true.
+•	a > b or b > 5: Returns True if at least one condition is true.
+•	not(a > b): Returns True if the condition is false.
+Assignment Operators
+•	Used to assign values to variables.
+
+python
+
+Copy code
+c = 5
+c += 3  # Equivalent to c = c + 3
+print(c)  # Output: 8
+•	c += 3: Adds 3 to c.
+Conditional Statements
+•	Execute different blocks of code based on conditions.
+
+python
+Copy code
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is 5")
+else:
+    print("x is less than 5")
+•	if x > 5:: If x is greater than 5, execute the indented block.
+•	elif x == 5:: If x is equal to 5, execute this block.
+•	else:: If neither condition is true, execute this block.
+Loops
+•	Repeat blocks of code.
+python
+Copy code
+for i in range(5):
+    print(i)
+•	for i in range(5):: Iterates from 0 to 4 (5 iterations).
+python
+Copy code
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+•	while i < 5:: Repeats as long as i is less than 5.
+Break, Continue, Pass
+•	Control the flow of loops.
+python
+Copy code
+for i in range(10):
+    if i == 5:
+        break  # Exits the loop when i is 5
+    print(i)
+•	break: Exits the loop prematurely.
+Defining and Calling Functions
+•	Functions encapsulate reusable blocks of code.
+python
+Copy code
+def greet(name):
+    return "Hello, " + name
+
+print(greet("Alice"))
+•	def greet(name):: Defines a function greet with parameter name.
+•	return "Hello, " + name: Returns a greeting message.
+Lambda Functions
+•	Anonymous, single-line functions.
+python
+Copy code
+add = lambda a, b: a + b
+print(add(2, 3))
+•	lambda a, b: a + b: Defines a lambda function that adds a and b.
+Lists
+•	Ordered, mutable collections.
+python
+Copy code
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+my_list.append(6)
+print(my_list)
+•	my_list.append(6): Adds 6 to the end of my_list.
+Tuples
+•	Ordered, immutable collections.
+python
+Copy code
+my_tuple = (1, 2, 3)
+print(my_tuple)
+•	my_tuple: A tuple with three elements.
+Dictionaries
+•	Collections of key-value pairs.
+python
+Copy code
+my_dict = {"name": "Alice", "age": 25}
+print(my_dict)
+print(my_dict["name"])
+•	my_dict["name"]: Accesses the value associated with the key "name".
+Sets
+•	Unordered collections of unique elements.
+python
+Copy code
+my_set = {1, 2, 3, 4, 5}
+print(my_set)
+•	my_set: A set with five unique elements.
+User Input
+•	Read input from the user.
+python
+Copy code
+name = input("Enter your name: ")
+print("Hello, " + name)
+•	input("Enter your name: "): Prompts the user and stores the input in name.
+List Comprehensions
+•	Concise way to create lists.
+python
+
+
+
+level 2
+
+squares = [x ** 2 for x in range(10)]
+print(squares)
+•	[x ** 2 for x in range(10)]: Creates a list of squares of numbers from 0 to 9.
+Dictionary Comprehensions
+•	Concise way to create dictionaries.
+python
+Copy code
+my_dict = {x: x ** 2 for x in range(5)}
+print(my_dict)
+•	{x: x ** 2 for x in range(5)}: Creates a dictionary with numbers as keys and their squares as values.
+Modules and Packages
+•	Organize code into modules and packages.
+python
+Copy code
+import math
+print(math.sqrt(16))
+•	import math: Imports the math module.
+•	math.sqrt(16): Calls the sqrt function from the math module.
+Object-Oriented Programming (OOP)
+•	Define classes and create objects.
+python
+Copy code
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        return "Woof!"
+
+my_dog = Dog("Buddy", 3)
+print(my_dog.name)
+print(my_dog.bark())
+•	class Dog:: Defines a class named Dog.
+•	def __init__(self, name, age):: The constructor method initializes the object.
+•	self.name = name: Sets the name attribute.
+•	def bark(self):: Defines a method that returns "Woof!".
+Basic Calculator
+•	Perform basic arithmetic operations through user input.
+python
+Copy code
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+
+while True:
+    choice = input("Enter choice (add/subtract/multiply/divide): ")
+    if choice in ('add', 'subtract', 'multiply', 'divide'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == 'add':
+            print("Result:", add(num1, num2))
+        elif choice == 'subtract':
+            print("Result:", subtract(num1, num2))
+        elif choice == 'multiply':
+            print("Result:", multiply(num1, num2))
+        elif choice == 'divide':
+            print("Result:", divide(num1, num2))
+    else:
+        print("Invalid input")
+•	Functions: Define basic arithmetic functions (add, subtract, multiply, divide).
+•	while True:: Creates an infinite loop to continually prompt for user input.
+Quiz
+•	Simple quiz application.
+python
+Copy code
+questions = {
+    "What is the capital of France?": "Paris",
+    "What is 2 + 2?": "4",
+    "Who wrote 'To Kill a Mockingbird'?": "Harper Lee"
+}
+
+score = 0
+for question, answer in questions.items():
+    user_answer = input(question + " ")
+    if user_answer.lower() == answer.lower():
+        score += 1
+
+print(f"Your score is {score}/{len(questions)}")
+•	questions: A dictionary of questions and answers.
+•	for question, answer in questions.items():: Iterates through each question-answer pair.
+•	if user_answer.lower() == answer.lower():: Checks if the user's answer is correct.
+
+
+
+
+Python
+Project
+Contact Book
+•	Manage contacts with add, delete, search, and exit options.
+python
+Copy code
+contacts = {}
+
+def add_contact(name, number):
+    contacts[name] = number
+
+def delete_contact(name):
+    if name in contacts:
+        del contacts[name]
+
+def search_contact(name):
+    return contacts.get(name, "Contact not found")
+
+while True:
+    choice = input("Enter choice (add/delete/search/exit): ")
+    if choice == 'add':
+        name = input("Enter name: ")
+        number = input("Enter number: ")
+        add_contact(name, number)
+    elif choice == 'delete':
+        name = input("Enter name: ")
+        delete_contact(name)
+    elif choice == 'search':
+        name = input("Enter name: ")
+        print(search_contact(name))
+    elif choice == 'exit':
+        break
+    else:
+        print("Invalid input")
+•	Functions: Define functions to add, delete, and search contacts.
+•	while True:: Creates an infinite loop to continually prompt for user input.
+To-Do List
+•	Manage a list of tasks.
+python
+Copy code
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+
+def delete_task(task):
+    if task in tasks:
+        tasks.remove(task)
+
+def view_tasks():
+    return tasks
+
+while True:
+    choice = input("Enter choice (add/delete/view/exit): ")
+    if choice == 'add':
+        task = input("Enter task: ")
+        add_task(task)
+    elif choice == 'delete':
+        task = input("Enter task: ")
+        delete_task(task)
+    elif choice == 'view':
+        print(view_tasks())
+    elif choice == 'exit':
+        break
+    else:
+        print("Invalid input")
+•	Functions: Define functions to add, delete, and view tasks.
+•	while True:: Creates an infinite loop to continually prompt for user input.
